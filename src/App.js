@@ -3,6 +3,8 @@ import {BrowserRouter as Router , Route , Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import PrivateRoute from './PrivateRoute';
+import CreateTeams from './pages/CreateTeams';
 function App() {
  return (
   <Router>
@@ -15,6 +17,10 @@ function App() {
     <Switch>
         <Route path='/login' exact component={Login}/> 
     </Switch>
+    <Switch>
+        <PrivateRoute path='/create-team' exact component={CreateTeams}/> 
+    </Switch>
+
   </Router>  
   );
 }
