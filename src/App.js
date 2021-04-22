@@ -5,6 +5,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import PrivateRoute from './PrivateRoute';
 import CreateTeams from './pages/CreateTeams';
+import ViewTeam from './pages/ViewTeam';
 function App() {
  return (
   <Router>
@@ -20,7 +21,9 @@ function App() {
     <Switch>
         <PrivateRoute path='/create-team' exact component={CreateTeams}/> 
     </Switch>
-
+    <Switch>
+        <PrivateRoute path='/view-team' exact component={ViewTeam}  />
+    </Switch>
   </Router>  
   );
 }
